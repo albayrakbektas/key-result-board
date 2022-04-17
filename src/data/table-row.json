@@ -1,0 +1,1063 @@
+[
+  {
+    "keyResult": "NPS",
+    "start": 20,
+    "target": 100,
+    "current": 100,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Ugur",
+        "image": "https://www.cambly.com/fe/static/login_illustration_big.png"
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "Percentage Leads",
+    "start": 0,
+    "target": 75,
+    "current": 75,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Gamze",
+        "image": ""
+      },
+      {
+        "name": "Emre",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "Close Rate",
+    "start": 22,
+    "target": 27,
+    "current": 26.4,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Ugur",
+        "image": ""
+      }
+    ],
+    "lastCheckin": "0 -> 100"
+  },
+  {
+    "keyResult": "Quarterly Revenue",
+    "start": 20000,
+    "target": 100000,
+    "current": 950000,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Ugur",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "New Country Revenue",
+    "start": 0,
+    "target": 100000,
+    "current": 0,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Emre",
+        "image": ""
+      },
+      {
+        "name": "Kemal",
+        "image": ""
+      },
+      {
+        "name": "Mustafa",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "Profit Margin",
+    "start": 0,
+    "target": 54,
+    "current": 23,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Emre",
+        "image": ""
+      },
+      {
+        "name": "Kemal",
+        "image": ""
+      },
+      {
+        "name": "Mustafa",
+        "image": ""
+      },
+      {
+        "name": "Bektas",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "Customer",
+    "start": 20,
+    "target": 100,
+    "current": 70,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "id": 1,
+        "name": "Ugur",
+        "image": ""
+      },
+      {
+        "id": 2,
+        "name": "Melis",
+        "image": ""
+      },
+      {
+        "id": 3,
+        "name": "Alperen",
+        "image": ""
+      },
+      {
+        "id": 4,
+        "name": "Halil",
+        "image": ""
+      },
+      {
+        "id": 5,
+        "name": "Bektas",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  },
+  {
+    "keyResult": "Happiness",
+    "start": 50,
+    "target": 100,
+    "current": 36,
+    "checkinProgress": [
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": null
+      },
+      {
+        "period": "",
+        "rate": 80
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 49
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "14-20",
+        "rate": 30
+      }
+    ],
+    "owners": [
+      {
+        "name": "Ugur",
+        "image": ""
+      }
+    ],
+    "lastCheckin": ""
+  }
+]
