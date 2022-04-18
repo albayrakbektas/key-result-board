@@ -120,8 +120,12 @@
     ],
     "owners": [
       {
-        "name": "Ugur",
-        "image": "https://www.cambly.com/fe/static/login_illustration_big.png"
+        "name": "Bektas",
+        "image": "https://media-exp1.licdn.com/dms/image/D5603AQHtBcScJxjpLw/profile-displayphoto-shrink_400_400/0/1644421623439?e=1655942400&v=beta&t=qf2-8NwegLmDqglRJC7K6NeIeQgX3R9op8vM6Ui62gw"
+      },
+      {
+        "name": "Alperen",
+        "image": "https://media-exp1.licdn.com/dms/image/C5603AQEF_I4RBs45DQ/profile-displayphoto-shrink_400_400/0/1650108052947?e=1655942400&v=beta&t=C6ml0pqsqi4m1QB6jZgVLvJVM_uY4FqM8AZTcm6FeQM"
       }
     ],
     "lastCheckin": ""
@@ -146,6 +150,18 @@
       },
       {
         "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
         "rate": 50
       },
       {
@@ -163,18 +179,6 @@
       {
         "period": "",
         "rate": 90
-      },
-      {
-        "period": "",
-        "rate": 86
-      },
-      {
-        "period": "",
-        "rate": 65
-      },
-      {
-        "period": "",
-        "rate": 100
       },
       {
         "period": "",
@@ -252,7 +256,7 @@
       },
       {
         "name": "Emre",
-        "image": ""
+        "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEoVdS0KwFKGQ/profile-displayphoto-shrink_400_400/0/1591008273776?e=1655942400&v=beta&t=QYjyaVEIpD8-hc_zC8KssX6QVSNe7YZIV0hFjBMh9PU"
       }
     ],
     "lastCheckin": ""
@@ -263,6 +267,22 @@
     "target": 27,
     "current": 26.4,
     "checkinProgress": [
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 90
+      },
+      {
+        "period": "",
+        "rate": 86
+      },
+      {
+        "period": "",
+        "rate": 65
+      },
       {
         "period": "",
         "rate": 0
@@ -286,22 +306,6 @@
       {
         "period": "",
         "rate": 49
-      },
-      {
-        "period": "",
-        "rate": 100
-      },
-      {
-        "period": "",
-        "rate": 90
-      },
-      {
-        "period": "",
-        "rate": 86
-      },
-      {
-        "period": "",
-        "rate": 65
       },
       {
         "period": "",
@@ -476,7 +480,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 65
       },
       {
         "period": "",
@@ -500,13 +504,13 @@
       },
       {
         "period": "",
-        "rate": 65
+        "rate": 30
       }
     ],
     "owners": [
       {
-        "name": "Ugur",
-        "image": ""
+        "name": "Furkan",
+        "image": "https://media-exp1.licdn.com/dms/image/C5603AQE6zlcuzo4qIw/profile-displayphoto-shrink_400_400/0/1637662362570?e=1655942400&v=beta&t=QC1UgAq6_2mxPje6OgdSY9gaYNc1rM07GUZYWVw38Uc"
       }
     ],
     "lastCheckin": ""
@@ -555,6 +559,14 @@
       },
       {
         "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
         "rate": 65
       },
       {
@@ -571,15 +583,15 @@
       },
       {
         "period": "",
-        "rate": 20
-      },
-      {
-        "period": "",
-        "rate": 0
-      },
-      {
-        "period": "",
         "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
       },
       {
         "period": "",
@@ -599,27 +611,19 @@
       },
       {
         "period": "",
-        "rate": 0
-      },
-      {
-        "period": "",
-        "rate": 30
-      },
-      {
-        "period": "",
-        "rate": 100
-      },
-      {
-        "period": "",
-        "rate": 60
-      },
-      {
-        "period": "",
         "rate": 50
       },
       {
         "period": "",
         "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
       },
       {
         "period": "",
@@ -633,11 +637,11 @@
     "owners": [
       {
         "name": "Emre",
-        "image": ""
+        "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEoVdS0KwFKGQ/profile-displayphoto-shrink_400_400/0/1591008273776?e=1655942400&v=beta&t=QYjyaVEIpD8-hc_zC8KssX6QVSNe7YZIV0hFjBMh9PU"
       },
       {
-        "name": "Kemal",
-        "image": ""
+        "name": "Furkan",
+        "image": "https://media-exp1.licdn.com/dms/image/C5603AQE6zlcuzo4qIw/profile-displayphoto-shrink_400_400/0/1637662362570?e=1655942400&v=beta&t=QC1UgAq6_2mxPje6OgdSY9gaYNc1rM07GUZYWVw38Uc"
       },
       {
         "name": "Mustafa",
@@ -768,7 +772,7 @@
     "owners": [
       {
         "name": "Emre",
-        "image": ""
+        "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEoVdS0KwFKGQ/profile-displayphoto-shrink_400_400/0/1591008273776?e=1655942400&v=beta&t=QYjyaVEIpD8-hc_zC8KssX6QVSNe7YZIV0hFjBMh9PU"
       },
       {
         "name": "Kemal",
@@ -817,6 +821,62 @@
       },
       {
         "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 30
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
+        "rate": 60
+      },
+      {
+        "period": "",
+        "rate": 50
+      },
+      {
+        "period": "",
+        "rate": 20
+      },
+      {
+        "period": "",
+        "rate": 0
+      },
+      {
+        "period": "",
+        "rate": 100
+      },
+      {
+        "period": "",
         "rate": 100
       },
       {
@@ -846,69 +906,13 @@
       {
         "period": "",
         "rate": 20
-      },
-      {
-        "period": "",
-        "rate": 0
-      },
-      {
-        "period": "",
-        "rate": 30
-      },
-      {
-        "period": "",
-        "rate": 100
-      },
-      {
-        "period": "",
-        "rate": 60
-      },
-      {
-        "period": "",
-        "rate": 50
-      },
-      {
-        "period": "",
-        "rate": 20
-      },
-      {
-        "period": "",
-        "rate": 0
-      },
-      {
-        "period": "",
-        "rate": 30
-      },
-      {
-        "period": "",
-        "rate": 100
-      },
-      {
-        "period": "",
-        "rate": 60
-      },
-      {
-        "period": "",
-        "rate": 50
-      },
-      {
-        "period": "",
-        "rate": 20
-      },
-      {
-        "period": "",
-        "rate": 0
-      },
-      {
-        "period": "",
-        "rate": 100
       }
     ],
     "owners": [
       {
         "id": 1,
-        "name": "Ugur",
-        "image": ""
+        "name": "Furkan",
+        "image": "https://media-exp1.licdn.com/dms/image/C5603AQE6zlcuzo4qIw/profile-displayphoto-shrink_400_400/0/1637662362570?e=1655942400&v=beta&t=QC1UgAq6_2mxPje6OgdSY9gaYNc1rM07GUZYWVw38Uc"
       },
       {
         "id": 2,

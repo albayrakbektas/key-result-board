@@ -6,21 +6,47 @@
         <h1>Key Result Board</h1>
       </div>
       <div class="flex gap-2">
-        <div class="grid grid-cols-select justify-between min-w-125 cursor-pointer text-left ml-5"  @mouseover="isTimeFilterVisible = true" @mouseleave="isTimeFilterVisible = false">
+        <div
+          class="grid grid-cols-select justify-between min-w-125 cursor-pointer text-left ml-5"
+          @mouseover="isTimeFilterVisible = true"
+          @mouseleave="isTimeFilterVisible = false"
+        >
           <p class="text-left text-select">Time</p>
           <div class="block">
-            <p class="text-option">{{timeSelectedOption}}</p>
+            <p class="text-option">{{ timeSelectedOption }}</p>
             <ul class="cursor-pointer hover:block absolute z-10">
-              <li class="text-option" v-if="isTimeFilterVisible" @click="timeSelectOption" v-for="(option, index) in timeOptions" :value="option" :key="index">{{option}}</li>
+              <li
+                class="text-option"
+                v-if="isTimeFilterVisible"
+                @click="timeSelectOption"
+                v-for="(option, index) in timeOptions"
+                :value="option"
+                :key="index"
+              >
+                {{ option }}
+              </li>
             </ul>
           </div>
         </div>
-        <div class="grid grid-cols-select justify-between min-w-125 cursor-pointer text-left"  @mouseover="isFilterVisible = true" @mouseleave="isFilterVisible = false">
+        <div
+          class="grid grid-cols-select justify-between min-w-125 cursor-pointer text-left"
+          @mouseover="isFilterVisible = true"
+          @mouseleave="isFilterVisible = false"
+        >
           <p class="text-left text-select">Filter</p>
           <div class="block">
-            <p class="text-option">{{filterSelectedOption}}</p>
+            <p class="text-option">{{ filterSelectedOption }}</p>
             <ul class="cursor-pointer hover:block absolute z-10 bg-white">
-              <li class="text-option" v-if="isFilterVisible" @click="filterSelectOption" v-for="(option, index) in filterCompleted" :value="option" :key="index">{{option}}</li>
+              <li
+                class="text-option"
+                v-if="isFilterVisible"
+                @click="filterSelectOption"
+                v-for="(option, index) in filterCompleted"
+                :value="option"
+                :key="index"
+              >
+                {{ option }}
+              </li>
             </ul>
           </div>
         </div>
@@ -31,106 +57,189 @@
     </div>
     <table class="table-auto w-full border-collapse relative">
       <thead>
-      <tr class="h-10">
-        <th class="text-left text-sm accent-gray-100 font-light">Key Results</th>
-        <th class="text-center text-sm accent-gray-100 font-light" v-for="th in tableHead">{{th}}</th>
-      </tr>
+        <tr class="h-10">
+          <th class="text-left text-sm accent-gray-100 font-light">
+            Key Results
+          </th>
+          <th
+            class="text-center text-sm accent-gray-100 font-light"
+            v-for="th in tableHead"
+          >
+            {{ th }}
+          </th>
+        </tr>
       </thead>
       <tbody>
-      <tr class="border-t-2 border-solid h-20 font-normal" v-for="(item, index) in rowData">
-        <td class="text-left">{{item.keyResult}}</td>
-        <td class="text-center">{{item.start}}</td>
-        <td class="text-center">{{item.target > 100000 ? `${item.target % 100}` : ``}}</td>
-        <td class="text-center">
-          <div class="flex items-center justify-center">
-<!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = null" class="bg-white rounded h-5 w-5"></div>-->
-<!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = 0" class="bg-gray-400 rounded h-5 w-5"></div>-->
-<!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 26" class="bg-gray-600 rounded h-5 w-5"></div>-->
-<!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 51" class="bg-red-500 rounded h-5 w-5"></div>-->
-<!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 86" class="bg-amber-600 rounded h-5 w-5"></div>-->
-<!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate <= 100" class="bg-gray-400 rounded h-5 w-5"></div>-->
-            <div class="bg-green-500 rounded h-5 w-5"></div>
-            <div>{{item.checkinProgress[item.checkinProgress.length - 1].rate}}</div>
-          </div>
-        </td>
-        <td class=" w-1/2 max-w-screen-sm">
-          <div class="flex items-center">
-            <div>
-              <ChevronLeftIcon v-if="scrollBarCount[index] > 0" @click="scrollLeft(index)" class="h-10 w-10 hover:cursor-pointer" />
-            </div>
-            <div :key="index" ref="scrollBar" class="overflow-x-scroll overflow-scroll flex scrollbar-hide">
-              <div :key="index" v-for="(checkin, index) in item.checkinProgress" class="h-10 w-60 min-w-60 inline-flex items-center cursor-pointer data-tooltip-target">
-<!--                <div class="grid w-250 h-150 absolute top-0 bg-white">-->
-<!--                  <div>Period of Nov {{checkin.period}}</div>-->
-<!--                  <div class="grid grid-cols-3">-->
-<!--                    <p>Last Week</p>-->
-<!--                    <p>Next Week</p>-->
-<!--                    <p>Changes</p>-->
-<!--                  </div>-->
-<!--                  <div class="grid grid-cols-3">-->
-<!--                    <div class="block">-->
-<!--                      <p>{{ item.checkinProgress[index-1].rate }}(%{{ item.checkinProgress[index-1].rate }})</p>-->
-<!--                      <div class="flex justify-center">-->
-<!--                        <div class="bg-green-500 w-2 h-2"></div>-->
-<!--                        <p>On Track</p>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="block">-->
-<!--                      <p>{{ checkin.rate }}(%{{ checkin.rate }})</p>-->
-<!--                      <div class="flex justify-center">-->
-<!--                        <div class="bg-green-500 w-2 h-2"></div>-->
-<!--                        <p>On Track</p>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex justify-center">-->
-<!--                      <p>19(%19)</p>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="flex justify-center">-->
-<!--                    <div class="bg-green-500 w-2 h-2"></div>-->
-<!--                    <p>View Activity</p>-->
-<!--                  </div>-->
-<!--                </div>-->
-                <div v-if="checkin.rate === null " class="bg-white border-2 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
-                <div v-else-if="checkin.rate < 1 " class="bg-gray-400 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
-                <div v-else-if="checkin.rate < 26 "  class="bg-gray-600 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
-                <div v-else-if="checkin.rate < 51 "  class="bg-red-500 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
-                <div v-else-if="checkin.rate < 86 "  class="bg-amber-600 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
-                <div v-else-if="checkin.rate <= 100 "  class="bg-green-500 grid m-1 rounded w-full h-full">{{checkin.rate}}</div>
+        <tr
+          class="border-t-2 border-solid h-20 font-normal"
+          v-for="(item, index) in rowData"
+        >
+          <td class="text-left">{{ item.keyResult }}</td>
+          <td class="text-center">{{ item.start }}</td>
+          <td class="text-center">
+            {{ item.target > 100000 ? `${item.target % 100}` : `` }}
+          </td>
+          <td class="text-center">
+            <div class="flex items-center justify-center">
+              <!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = null" class="bg-white rounded h-5 w-5"></div>-->
+              <!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = 0" class="bg-gray-400 rounded h-5 w-5"></div>-->
+              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 26" class="bg-gray-600 rounded h-5 w-5"></div>-->
+              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 51" class="bg-red-500 rounded h-5 w-5"></div>-->
+              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 86" class="bg-amber-600 rounded h-5 w-5"></div>-->
+              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate <= 100" class="bg-gray-400 rounded h-5 w-5"></div>-->
+              <div class="bg-green-500 rounded h-5 w-5"></div>
+              <div>
+                {{ item.checkinProgress[item.checkinProgress.length - 1].rate }}
               </div>
             </div>
-            <div>
-              <ChevronRightIcon v-if="scrollBarCount[index] < 1150" @click="scrollRight(index)" class="h-10 w-10 hover:cursor-pointer justify-end" />
-            </div>
-          </div>
-        </td>
-        <td class="text-center">
-          <div ref="parent" class="flex justify-center">
-            <div :key="index" v-for="(own, index) in item.owners" class="bg-green-500 rounded-full h-10 w-10 text-center grid relative">
-              <p class="h-full w-full bg-white" v-if="own.id > 3 && own.id === item.owners.length">+ {{item.owners.length - 3}}</p>
-              <div v-else>
-                <img class="w-full h-full flex" v-if="own.image" :src="own.image"  :alt=own.name />
-                <p v-else>{{own.name.charAt(0)}}</p>
+          </td>
+          <td class="w-1/2 max-w-screen-sm">
+            <div class="flex items-center">
+              <div>
+                <ChevronLeftIcon
+                  v-if="scrollBarCount[index] > 0"
+                  @click="scrollLeft(index)"
+                  class="h-10 w-10 hover:cursor-pointer"
+                />
+              </div>
+              <div
+                :key="index"
+                ref="scrollBar"
+                class="overflow-x-scroll overflow-scroll flex scrollbar-hide"
+              >
+                <div
+                  :key="index"
+                  v-for="(checkin, index) in item.checkinProgress"
+                  class="h-10 w-60 min-w-60 inline-flex items-center cursor-pointer data-tooltip-target"
+                >
+                  <!--                <div class="grid w-250 h-150 absolute top-0 bg-white">-->
+                  <!--                  <div>Period of Nov {{checkin.period}}</div>-->
+                  <!--                  <div class="grid grid-cols-3">-->
+                  <!--                    <p>Last Week</p>-->
+                  <!--                    <p>Next Week</p>-->
+                  <!--                    <p>Changes</p>-->
+                  <!--                  </div>-->
+                  <!--                  <div class="grid grid-cols-3">-->
+                  <!--                    <div class="block">-->
+                  <!--                      <p>{{ item.checkinProgress[index-1].rate }}(%{{ item.checkinProgress[index-1].rate }})</p>-->
+                  <!--                      <div class="flex justify-center">-->
+                  <!--                        <div class="bg-green-500 w-2 h-2"></div>-->
+                  <!--                        <p>On Track</p>-->
+                  <!--                      </div>-->
+                  <!--                    </div>-->
+                  <!--                    <div class="block">-->
+                  <!--                      <p>{{ checkin.rate }}(%{{ checkin.rate }})</p>-->
+                  <!--                      <div class="flex justify-center">-->
+                  <!--                        <div class="bg-green-500 w-2 h-2"></div>-->
+                  <!--                        <p>On Track</p>-->
+                  <!--                      </div>-->
+                  <!--                    </div>-->
+                  <!--                    <div class="flex justify-center">-->
+                  <!--                      <p>19(%19)</p>-->
+                  <!--                    </div>-->
+                  <!--                  </div>-->
+                  <!--                  <div class="flex justify-center">-->
+                  <!--                    <div class="bg-green-500 w-2 h-2"></div>-->
+                  <!--                    <p>View Activity</p>-->
+                  <!--                  </div>-->
+                  <!--                </div>-->
+                  <div
+                    v-if="checkin.rate === null"
+                    class="bg-white border-2 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                  <div
+                    v-else-if="checkin.rate < 1"
+                    class="bg-gray-400 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                  <div
+                    v-else-if="checkin.rate < 26"
+                    class="bg-gray-600 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                  <div
+                    v-else-if="checkin.rate < 51"
+                    class="bg-red-500 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                  <div
+                    v-else-if="checkin.rate < 86"
+                    class="bg-amber-600 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                  <div
+                    v-else-if="checkin.rate <= 100"
+                    class="bg-green-500 grid m-1 rounded w-full h-full"
+                  >
+                    {{ checkin.rate }}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <ChevronRightIcon
+                  v-if="scrollBarCount[index] < 1150"
+                  @click="scrollRight(index)"
+                  class="h-10 w-10 hover:cursor-pointer justify-end"
+                />
               </div>
             </div>
-          </div>
-        </td>
-        <td class="text-center">{{item.lastCheckin}}</td>
-      </tr>
+          </td>
+          <td class="text-center">
+            <div ref="parent" class="flex justify-center">
+              <div
+                :key="index"
+                :ref="'avatar' + index"
+                v-for="(own, index) in item.owners.slice(0, 3)"
+                class="bg-avatar rounded-full h-10 w-10 text-center grid relative cursor-pointer hover:bg-primary"
+                :class="avatar17"
+              >
+                <div>
+                  <img
+                    class="w-full h-full flex object-cover rounded-full"
+                    v-if="own.image"
+                    :src="own.image"
+                    :alt="own.name"
+                  />
+                  <p class="text-avatar hover:text-white" v-else>{{ own.name.charAt(0) }}</p>
+                </div>
+              </div>
+              <div
+                v-if="item.owners.length > 3"
+                class="bg-avatar rounded-full h-10 w-10 text-center grid relative ml-5 cursor-pointer hover:bg-primary"
+              >
+                <div class="text-avatar font-bold hover:text-white">
+                  +{{ item.owners.length - 3 }}
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="text-center">{{ item.lastCheckin }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </template>
 
 <script>
-import tableHead from '../data/table-head.json'
-import rowData from '../data/table-row.json'
-import timeOptions from '../data/time-options.json'
-import filterCompleted from '../data/filter-options.json'
-import { ChevronLeftIcon, ChevronRightIcon, TableIcon, DotsVerticalIcon } from "@heroicons/vue/solid";
+import tableHead from "../data/table-head.json";
+import rowData from "../data/table-row.json";
+import timeOptions from "../data/time-options.json";
+import filterCompleted from "../data/filter-options.json";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  TableIcon,
+  DotsVerticalIcon,
+} from "@heroicons/vue/solid";
 import OwnerAvatar from "./OwnerAvatar.vue";
 export default {
-  data: function() {
+  data: function () {
     return {
       rowData: rowData,
       tableHead: tableHead,
@@ -141,42 +250,42 @@ export default {
       isFilterVisible: false,
       timeSelectedOption: "All Time",
       filterSelectedOption: "Completed",
-      scrollBarCount: [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ]
-    }
+      scrollBarCount: [0, 0, 0, 0, 0, 0, 0, 0],
+      avatar17: "avatar-17",
+    };
   },
-  created() {
-
-  },
+  mounted() {},
   name: "Table",
-  components: {OwnerAvatar, ChevronLeftIcon, ChevronRightIcon, TableIcon, DotsVerticalIcon },
+  components: {
+    OwnerAvatar,
+    ChevronLeftIcon,
+    ChevronRightIcon,
+    TableIcon,
+    DotsVerticalIcon,
+  },
   methods: {
     scrollLeft: function (index) {
-      const scrollBar = this.$refs.scrollBar[index]
+      const scrollBar = this.$refs.scrollBar[index];
       scrollBar.scrollLeft -= 50;
-      if(this.scrollBarCount[index] >= 0) this.scrollBarCount[index] -= 50
+      if (this.scrollBarCount[index] >= 0) this.scrollBarCount[index] -= 50;
     },
     scrollRight: function (index) {
-      const scrollBar = this.$refs.scrollBar[index]
+      const scrollBar = this.$refs.scrollBar[index];
       scrollBar.scrollLeft += 50;
-      if(this.scrollBarCount[index] < 1150) this.scrollBarCount[index] += 50
+      if (this.scrollBarCount[index] < 1150) this.scrollBarCount[index] += 50;
     },
     timeSelectOption: function (e) {
-      this.timeSelectedOption = e.path[0]._value
+      this.timeSelectedOption = e.path[0]._value;
     },
     filterSelectOption: function (e) {
-      this.filterSelectedOption = e.path[0]._value
-    }
-  }
+      this.filterSelectedOption = e.path[0]._value;
+    },
+  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.avatar-17 {
+  margin-right: -17px;
+}
+</style>
