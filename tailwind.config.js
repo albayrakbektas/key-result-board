@@ -17,6 +17,10 @@ module.exports = {
         100: "100px",
         125: "125px"
       },
+      colors: {
+        select: "#9d9d9d",
+        option: "#333"
+      },
       backgroundColor: {
         primary: "rgba(255, 94, 22, 1)"
       },

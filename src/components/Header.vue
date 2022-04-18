@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between border-b-2 h-50">
     <div class="flex h-full">
-      <div class="flex h-full">
+      <div class="flex h-full cursor-pointer">
         <p>Key Result Board</p>
         <ChevronDownIcon class="h-7 w-7 cursor-pointer text-gray-600" />
       </div>
@@ -9,7 +9,7 @@
         <PlusIcon class="cursor-pointer text-gray-600 w-7 h-7 m-auto align-middle" />
       </div>
     </div>
-    <div class="flex cursor-pointer bg-primary h-full">
+    <div class="flex cursor-pointer bg-primary h-full p-5">
       <PlusIcon class="h-7 w-7 cursor-pointer text-white mr-2" />
       <p class="text-white font-bold">Add Widget</p>
     </div>

@@ -238,11 +238,11 @@
       },
       {
         "period": "",
-        "rate": 0
+        "rate": 15
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 25
       }
     ],
     "owners": [
@@ -373,7 +373,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 40
       }
     ],
     "owners": [
@@ -500,7 +500,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 65
       }
     ],
     "owners": [
@@ -627,7 +627,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 20
       }
     ],
     "owners": [
@@ -762,7 +762,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 80
       }
     ],
     "owners": [
@@ -901,7 +901,7 @@
       },
       {
         "period": "",
-        "rate": 30
+        "rate": 100
       }
     ],
     "owners": [

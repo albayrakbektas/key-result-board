@@ -3,7 +3,7 @@ import Main from "./components/Main.vue";
 </script>
 
 <template>
-  <Main class="px-10" />
+  <Main class="px-10 w-full" />
 </template>
 
 <style>
