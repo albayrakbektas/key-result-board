@@ -14,9 +14,11 @@
           <p class="text-left text-select">Time</p>
           <div class="block">
             <p class="text-option">{{ timeSelectedOption }}</p>
-            <ul class="cursor-pointer hover:block absolute z-10">
+            <ul
+              class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
+            >
               <li
-                class="text-option"
+                class="text-option border-b-2 hover:bg-gray-400 rounded-2xl"
                 v-if="isTimeFilterVisible"
                 @click="timeSelectOption"
                 v-for="(option, index) in timeOptions"
@@ -36,9 +38,11 @@
           <p class="text-left text-select">Filter</p>
           <div class="block">
             <p class="text-option">{{ filterSelectedOption }}</p>
-            <ul class="cursor-pointer hover:block absolute z-10 bg-white">
+            <ul
+              class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
+            >
               <li
-                class="text-option"
+                class="text-option border-b-2 hover:bg-gray-400 rounded-2xl"
                 v-if="isFilterVisible"
                 @click="filterSelectOption"
                 v-for="(option, index) in filterCompleted"
@@ -80,14 +84,43 @@
             {{ item.target }}
           </td>
           <td class="text-center">
-            <div class="flex items-center justify-center">
-              <!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = null" class="bg-white rounded h-5 w-5"></div>-->
-              <!--            <div v-if="item.checkinProgress[item.checkinProgress.length - 1].rate = 0" class="bg-gray-400 rounded h-5 w-5"></div>-->
-              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 26" class="bg-gray-600 rounded h-5 w-5"></div>-->
-              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 51" class="bg-red-500 rounded h-5 w-5"></div>-->
-              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate < 86" class="bg-amber-600 rounded h-5 w-5"></div>-->
-              <!--            <div v-else-if="item.checkinProgress[item.checkinProgress.length - 1].rate <= 100" class="bg-gray-400 rounded h-5 w-5"></div>-->
-              <div class="bg-green-500 rounded h-5 w-5"></div>
+            <div class="flex items-center justify-center gap-1">
+              <div
+                v-if="
+                  item.checkinProgress[item.checkinProgress.length - 1].rate ===
+                  null
+                "
+                class="bg-white rounded h-5 w-5"
+              ></div>
+              <div
+                v-else-if="
+                  item.checkinProgress[item.checkinProgress.length - 1].rate ===
+                  0
+                "
+                class="bg-gray-400 rounded h-5 w-5"
+              ></div>
+              <div
+                v-else-if="
+                  item.checkinProgress[item.checkinProgress.length - 1].rate <
+                  26
+                "
+                class="bg-gray-600 rounded h-5 w-5"
+              ></div>
+              <div
+                v-else-if="
+                  item.checkinProgress[item.checkinProgress.length - 1].rate <
+                  51
+                "
+                class="bg-red-500 rounded h-5 w-5"
+              ></div>
+              <div
+                v-else-if="
+                  item.checkinProgress[item.checkinProgress.length - 1].rate <
+                  86
+                "
+                class="bg-amber-600 rounded h-5 w-5"
+              ></div>
+              <div v-else class="bg-green-500 rounded h-5 w-5"></div>
               <div>
                 {{ item.checkinProgress[item.checkinProgress.length - 1].rate }}
               </div>
@@ -110,70 +143,113 @@
                 <div
                   :key="index"
                   v-for="(checkin, index) in item.checkinProgress"
-                  class="h-10 w-60 min-w-60 inline-flex items-center cursor-pointer data-tooltip-target"
+                  class="h-10 w-60 min-w-60 inline-flex items-center cursor-pointer"
                 >
-                  <!--                <div class="grid w-250 h-150 absolute top-0 bg-white">-->
-                  <!--                  <div>Period of Nov {{checkin.period}}</div>-->
-                  <!--                  <div class="grid grid-cols-3">-->
-                  <!--                    <p>Last Week</p>-->
-                  <!--                    <p>Next Week</p>-->
-                  <!--                    <p>Changes</p>-->
-                  <!--                  </div>-->
-                  <!--                  <div class="grid grid-cols-3">-->
-                  <!--                    <div class="block">-->
-                  <!--                      <p>{{ item.checkinProgress[index-1].rate }}(%{{ item.checkinProgress[index-1].rate }})</p>-->
-                  <!--                      <div class="flex justify-center">-->
-                  <!--                        <div class="bg-green-500 w-2 h-2"></div>-->
-                  <!--                        <p>On Track</p>-->
-                  <!--                      </div>-->
-                  <!--                    </div>-->
-                  <!--                    <div class="block">-->
-                  <!--                      <p>{{ checkin.rate }}(%{{ checkin.rate }})</p>-->
-                  <!--                      <div class="flex justify-center">-->
-                  <!--                        <div class="bg-green-500 w-2 h-2"></div>-->
-                  <!--                        <p>On Track</p>-->
-                  <!--                      </div>-->
-                  <!--                    </div>-->
-                  <!--                    <div class="flex justify-center">-->
-                  <!--                      <p>19(%19)</p>-->
-                  <!--                    </div>-->
-                  <!--                  </div>-->
-                  <!--                  <div class="flex justify-center">-->
-                  <!--                    <div class="bg-green-500 w-2 h-2"></div>-->
-                  <!--                    <p>View Activity</p>-->
-                  <!--                  </div>-->
-                  <!--                </div>-->
                   <div
+                    @mouseover="isTooltipVisible = true"
+                    v-if="
+                      item.checkinProgress[index] === this.act &&
+                      isTooltipVisible
+                    "
+                    ref="tooltip"
+                    :id="'tooltip' + index"
+                    class="grid w-250 h-175 absolute m-tooltip bg-white rounded-2xl border-2"
+                  >
+                    <div class="justify-self-start pl-2">
+                      Period of Nov {{ checkin.period }}
+                    </div>
+                    <div class="grid grid-cols-3 border-t-2 border-b-2 py-2">
+                      <p>Last Week</p>
+                      <p>This Week</p>
+                      <p>Changes</p>
+                    </div>
+                    <div class="grid grid-cols-3 border-b-2">
+                      <div class="block">
+                        <p v-if="item.checkinProgress[index - 1]">
+                          {{ item.checkinProgress[index - 1].rate }}(%{{
+                            item.checkinProgress[index - 1].rate
+                          }})
+                        </p>
+                        <div class="flex justify-center gap-x-1">
+                          <div
+                            class="bg-green-500 w-3.5 h-3.5 rounded-full"
+                          ></div>
+                          <p>On Track</p>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <p>
+                          {{ item.checkinProgress[index].rate }}(%{{
+                            item.checkinProgress[index].rate
+                          }})
+                        </p>
+                        <div class="flex justify-center gap-x-1">
+                          <div
+                            class="bg-green-500 w-3.5 h-3.5 rounded-full"
+                          ></div>
+                          <p>On Track</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-center">
+                        <p>
+                          {{
+                            item.checkinProgress[index].rate -
+                            item.checkinProgress[index - 1].rate
+                          }}(%{{
+                            item.checkinProgress[index].rate -
+                            item.checkinProgress[index - 1].rate
+                          }})
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-center">
+                      <ExternalLinkIcon class="h-4 w-4 text-gray-500" />
+                      <p class="text-gray-500">View Activity</p>
+                    </div>
+                  </div>
+                  <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-if="checkin.rate === null"
                     class="bg-white border-2 grid m-1 rounded w-full h-full"
                   >
                     {{ checkin.rate }}
                   </div>
                   <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-else-if="checkin.rate < 1"
                     class="bg-gray-400 grid m-1 rounded w-full h-full"
                   >
                     {{ checkin.rate }}
                   </div>
                   <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-else-if="checkin.rate < 26"
                     class="bg-gray-600 grid m-1 rounded w-full h-full"
                   >
                     {{ checkin.rate }}
                   </div>
                   <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-else-if="checkin.rate < 51"
                     class="bg-red-500 grid m-1 rounded w-full h-full"
                   >
                     {{ checkin.rate }}
                   </div>
                   <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-else-if="checkin.rate < 86"
                     class="bg-amber-600 grid m-1 rounded w-full h-full"
                   >
                     {{ checkin.rate }}
                   </div>
                   <div
+                    @mouseover="showToolTip(item.checkinProgress[index])"
+                    @mouseleave="isTooltipVisible = false"
                     v-else-if="checkin.rate <= 100"
                     class="bg-green-500 grid m-1 rounded w-full h-full"
                   >
@@ -213,18 +289,21 @@
               </div>
               <div class="relative">
                 <div
-                  @click="plusAvatar = !plusAvatar"
+                  @click="showPopup(index)"
                   v-if="item.owners.length > 3"
-                  class="bg-avatar rounded-full h-10 w-10 text-center grid relative ml-5 cursor-pointer hover:bg-primary"
+                  class="border-avatar border-2 rounded-full h-10 w-10 text-center grid relative ml-5 cursor-pointer hover:bg-primary"
                 >
                   <div class="text-avatar font-bold hover:text-white">
                     +{{ item.owners.length - 3 }}
                   </div>
                 </div>
-                <div v-if="plusAvatar" class="absolute flex">
+                <div
+                  v-if="plusAvatar"
+                  class="absolute flex w-100 h-auto justify-end"
+                >
                   <div
-                      :key="index"
-                      ref="plusAvatarRef"
+                    :key="index"
+                    ref="plusAvatarRef"
                     class="bg-avatar rounded-full h-10 w-10 text-center grid relative cursor-pointer hover:bg-primary hover:border-amber-500 hover:border-2"
                     v-for="(own, index) in item.owners.slice(3)"
                   >
@@ -236,7 +315,7 @@
                         :alt="own.name"
                       />
                       <p class="text-avatar hover:text-white" v-else>
-                        {{ own.name.charAt(0) }}
+                        +{{ own.name.charAt(0) }}
                       </p>
                     </div>
                   </div>
@@ -261,8 +340,8 @@ import {
   ChevronRightIcon,
   TableIcon,
   DotsVerticalIcon,
+  ExternalLinkIcon,
 } from "@heroicons/vue/solid";
-import OwnerAvatar from "./OwnerAvatar.vue";
 export default {
   data: function () {
     return {
@@ -278,34 +357,46 @@ export default {
       scrollBarCount: [0, 0, 0, 0, 0, 0, 0, 0],
       avatar17: "avatar-17",
       plusAvatar: false,
+      act: false,
+      isTooltipVisible: false,
     };
   },
   mounted() {},
   name: "Table",
   components: {
-    OwnerAvatar,
     ChevronLeftIcon,
     ChevronRightIcon,
     TableIcon,
     DotsVerticalIcon,
+    ExternalLinkIcon,
   },
   methods: {
     scrollLeft: function (index) {
       const scrollBar = this.$refs.scrollBar[index];
-      scrollBar.scrollLeft -= 50;
+      scrollBar.scrollLeft -= 60;
       if (this.scrollBarCount[index] >= 0) this.scrollBarCount[index] -= 50;
     },
     scrollRight: function (index) {
       const scrollBar = this.$refs.scrollBar[index];
-      scrollBar.scrollLeft += 50;
+      scrollBar.scrollLeft += 60;
       if (this.scrollBarCount[index] < 1150) this.scrollBarCount[index] += 50;
     },
     timeSelectOption: function (e) {
       this.timeSelectedOption = e.path[0]._value;
+      this.isTimeFilterVisible = false;
     },
     filterSelectOption: function (e) {
       this.filterSelectedOption = e.path[0]._value;
-    }
+      this.isFilterVisible = false;
+    },
+    showPopup: function (index) {
+      this.plusAvatar = !this.plusAvatar;
+      const popup = this.$refs.plusAvatarRef[index];
+    },
+    showToolTip: function (index) {
+      this.act = index;
+      this.isTooltipVisible = true;
+    },
   },
 };
 </script>
