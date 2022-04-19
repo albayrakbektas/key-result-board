@@ -2,11 +2,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      margin: {
-        negative15: "-15px"
-      },
       height: {
         50: "50px",
+        60: "60px",
         70: "70px",
         150: "150px"
       },

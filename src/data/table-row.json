@@ -128,7 +128,7 @@
         "image": "https://media-exp1.licdn.com/dms/image/C5603AQEF_I4RBs45DQ/profile-displayphoto-shrink_400_400/0/1650108052947?e=1655942400&v=beta&t=C6ml0pqsqi4m1QB6jZgVLvJVM_uY4FqM8AZTcm6FeQM"
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "60 -> 100"
   },
   {
     "keyResult": "Percentage Leads",
@@ -259,7 +259,7 @@
         "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEoVdS0KwFKGQ/profile-displayphoto-shrink_400_400/0/1591008273776?e=1655942400&v=beta&t=QYjyaVEIpD8-hc_zC8KssX6QVSNe7YZIV0hFjBMh9PU"
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "0 -> 20"
   },
   {
     "keyResult": "Close Rate",
@@ -513,7 +513,7 @@
         "image": "https://media-exp1.licdn.com/dms/image/C5603AQE6zlcuzo4qIw/profile-displayphoto-shrink_400_400/0/1637662362570?e=1655942400&v=beta&t=QC1UgAq6_2mxPje6OgdSY9gaYNc1rM07GUZYWVw38Uc"
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "40 -> 50"
   },
   {
     "keyResult": "New Country Revenue",
@@ -648,7 +648,7 @@
         "image": ""
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "25 -> 35"
   },
   {
     "keyResult": "Profit Margin",
@@ -787,7 +787,7 @@
         "image": ""
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "70 -> 75"
   },
   {
     "keyResult": "Customer",
@@ -935,7 +935,7 @@
         "image": ""
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "10 -> 50"
   },
   {
     "keyResult": "Happiness",
@@ -1062,6 +1062,6 @@
         "image": ""
       }
     ],
-    "lastCheckin": ""
+    "lastCheckin": "20 -> 45"
   }
 ]

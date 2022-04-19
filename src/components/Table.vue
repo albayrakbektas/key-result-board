@@ -77,7 +77,7 @@
           <td class="text-left">{{ item.keyResult }}</td>
           <td class="text-center">{{ item.start }}</td>
           <td class="text-center">
-            {{ item.target > 100000 ? `${item.target % 100}` : `` }}
+            {{ item.target }}
           </td>
           <td class="text-center">
             <div class="flex items-center justify-center">
@@ -196,25 +196,50 @@
                 :key="index"
                 :ref="'avatar' + index"
                 v-for="(own, index) in item.owners.slice(0, 3)"
-                class="bg-avatar rounded-full h-10 w-10 text-center grid relative cursor-pointer hover:bg-primary"
+                class="bg-avatar rounded-full h-10 w-10 text-center grid relative cursor-pointer hover:bg-primary hover:border-amber-500 hover:border-2"
                 :class="avatar17"
               >
                 <div>
                   <img
-                    class="w-full h-full flex object-cover rounded-full"
+                    class="w-full h-full flex object-cover rounded-full hover:border-avatar hover:border-2"
                     v-if="own.image"
                     :src="own.image"
                     :alt="own.name"
                   />
-                  <p class="text-avatar hover:text-white" v-else>{{ own.name.charAt(0) }}</p>
+                  <p class="text-avatar hover:text-white" v-else>
+                    {{ own.name.charAt(0) }}
+                  </p>
                 </div>
               </div>
-              <div
-                v-if="item.owners.length > 3"
-                class="bg-avatar rounded-full h-10 w-10 text-center grid relative ml-5 cursor-pointer hover:bg-primary"
-              >
-                <div class="text-avatar font-bold hover:text-white">
-                  +{{ item.owners.length - 3 }}
+              <div class="relative">
+                <div
+                  @click="plusAvatar = !plusAvatar"
+                  v-if="item.owners.length > 3"
+                  class="bg-avatar rounded-full h-10 w-10 text-center grid relative ml-5 cursor-pointer hover:bg-primary"
+                >
+                  <div class="text-avatar font-bold hover:text-white">
+                    +{{ item.owners.length - 3 }}
+                  </div>
+                </div>
+                <div v-if="plusAvatar" class="absolute flex">
+                  <div
+                      :key="index"
+                      ref="plusAvatarRef"
+                    class="bg-avatar rounded-full h-10 w-10 text-center grid relative cursor-pointer hover:bg-primary hover:border-amber-500 hover:border-2"
+                    v-for="(own, index) in item.owners.slice(3)"
+                  >
+                    <div>
+                      <img
+                        class="w-full h-full flex object-cover rounded-full hover:border-avatar hover:border-2"
+                        v-if="own.image"
+                        :src="own.image"
+                        :alt="own.name"
+                      />
+                      <p class="text-avatar hover:text-white" v-else>
+                        {{ own.name.charAt(0) }}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,6 +277,7 @@ export default {
       filterSelectedOption: "Completed",
       scrollBarCount: [0, 0, 0, 0, 0, 0, 0, 0],
       avatar17: "avatar-17",
+      plusAvatar: false,
     };
   },
   mounted() {},
@@ -279,7 +305,7 @@ export default {
     },
     filterSelectOption: function (e) {
       this.filterSelectedOption = e.path[0]._value;
-    },
+    }
   },
 };
 </script>
