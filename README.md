@@ -6,3 +6,11 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 # key-result-board
+
+Vue3 + Vite + TailwindCss
+Icons -> https://heroicons.com/
+tailwind-scrollbar-hide -> https://www.npmjs.com/package/tailwind-scrollbar-hide
+
+
+# npm install
+# npm run dev
