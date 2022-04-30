@@ -15,7 +15,7 @@
           <div class="block">
             <p class="text-option">{{ timeSelectedOption }}</p>
             <ul
-              class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
+              class="cursor-pointer hover:block absolute z-10 bg-amber-50 rounded-2xl w-100"
             >
               <li
                 class="text-option border-b-2 hover:bg-orange-400 hover:text-white hover:font-bold rounded-md"
@@ -39,7 +39,7 @@
           <div class="block">
             <p class="text-option">{{ filterSelectedOption }}</p>
             <ul
-              class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
+              class="cursor-pointer hover:block absolute z-10 bg-amber-50 rounded-2xl w-100"
             >
               <li
                 class="text-option border-b-2 hover:bg-orange-400 hover:text-white hover:font-bold rounded-md"
