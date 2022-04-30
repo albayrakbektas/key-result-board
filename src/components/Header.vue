@@ -11,7 +11,7 @@
             class="cursor-pointer hover:block z-10 bg-white absolute w-200 border-orange-500 border-solid"
           >
             <li
-              class="text-option p-5 border-2 border-gray-400 rounded-2xl hover:bg-gray-400 text-left"
+              class="text-option p-5 border-2 border-gray-100 bg-amber-50 hover:bg-orange-400 hover:text-white hover:font-bold text-left relative rounded-md"
               v-if="isDashBoardNamesVisible"
               @click="changeDashboard"
               v-for="(option, index) in dashboardNames"
@@ -51,7 +51,7 @@
           placeholder="Type Dashboard Name"
         />
         <XCircleIcon
-          @click="isAddingNewBoard = false"
+          @click="closeAddingTab"
           v-if="!dashboardInputModel"
           class="cursor-pointer text-white bg-primary rounded w-12 h-8 p-1.5 m-auto align-middle hover:bg-hoverPrimary"
         />
@@ -61,6 +61,11 @@
           class="cursor-pointer text-white bg-primary rounded w-12 h-8 p-1.5 m-auto align-middle hover:bg-hoverPrimary"
         />
       </div>
+      <XCircleIcon
+          @click="closeAddingTab"
+          v-if="dashboardInputModel"
+          class="cursor-pointer text-white bg-red-800 rounded w-12 h-8 p-1.5 ml-2 m-auto align-middle hover:bg-red-500"
+      />
     </div>
     <div
       class="flex cursor-pointer bg-primary h-full p-5 hover:bg-hoverPrimary"
@@ -106,6 +111,10 @@ export default {
       }
       this.dashboardInputModel = "";
     },
+    closeAddingTab: function () {
+      this.isAddingNewBoard = false
+      this.dashboardInputModel = ""
+    }
   },
 };
 </script>

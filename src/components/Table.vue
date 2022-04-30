@@ -2,7 +2,7 @@
   <div class="w-full">
     <div class="flex justify-between w-full">
       <div class="flex w-full">
-        <TableIcon class="h-7 w-7 text-gray-600" />
+        <TableIcon class="h-7 w-7 text-orange-600" />
         <h1>Key Result Board</h1>
       </div>
       <div class="flex gap-2">
@@ -18,7 +18,7 @@
               class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
             >
               <li
-                class="text-option border-b-2 hover:bg-gray-400 rounded-2xl"
+                class="text-option border-b-2 hover:bg-orange-400 hover:text-white hover:font-bold rounded-md"
                 v-if="isTimeFilterVisible"
                 @click="timeSelectOption"
                 v-for="(option, index) in timeOptions"
@@ -42,7 +42,7 @@
               class="cursor-pointer hover:block absolute z-10 bg-white rounded-2xl w-100"
             >
               <li
-                class="text-option border-b-2 hover:bg-gray-400 rounded-2xl"
+                class="text-option border-b-2 hover:bg-orange-400 hover:text-white hover:font-bold rounded-md"
                 v-if="isFilterVisible"
                 @click="filterSelectOption"
                 v-for="(option, index) in filterCompleted"
@@ -259,7 +259,7 @@
               </div>
               <div>
                 <ChevronRightIcon
-                  v-if="scrollBarCount[index] < 1150"
+                  v-if="scrollBarCount[index] < scrollButtonWidth"
                   @click="scrollRight(index)"
                   class="h-10 w-10 hover:cursor-pointer justify-end"
                 />
@@ -353,12 +353,13 @@ export default {
       isTimeFilterVisible: false,
       isFilterVisible: false,
       timeSelectedOption: "All Time",
-      filterSelectedOption: "Completed",
+      filterSelectedOption: "All",
       scrollBarCount: [0, 0, 0, 0, 0, 0, 0, 0],
       avatar17: "avatar-17",
       plusAvatar: false,
       act: false,
       isTooltipVisible: false,
+      scrollButtonWidth: 1150
     };
   },
   mounted() {},
